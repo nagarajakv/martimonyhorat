@@ -1,54 +1,40 @@
-<link rel="stylesheet" media="screen" href="../lib/font-awesome/font-awesome.min.css">
-<link href="../lib/css/common.css" rel="stylesheet">
-<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<div class="container-fluid signin_page" style="background-image: url('../img/background.webp');background-repeat: no-repeat;
+<div class="container-fluid signin_page" style="background-image: url('kvn/matrimony/img/background.webp');background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;">
+  background-size: cover;"  ng-controller="SignInController as sc">
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
-        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
-            <div class="login-panel panel panel-default" id='lgnbox'>
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-0"></div>
+        <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+            <div class="login-panel panel panel-default mx-4" id='lgnbox'>
                 <div class="panel-heading login_title_container">
                     <div class="lgn_title_header">
-                        <div class="lbltitle"><h1 class="text-white">Matrimony Horat</h1></div>
+                        <div class="lbltitle"><h1 class="text-white mb-4">Matrimony Horat</h1></div>
                     </div>
                 </div>
                 <div class="panel-body" style="position:relative;">
-                    <form role="form" method="POST" novalidate="" name="signinForm" ng-submit="sc.signin(signinForm)">
-                        <fieldset>
-                            <span ng-if="sc.IsInvalidLoginAttempted"  ng-class="{ 'has-error' : sc.IsInvalidLoginAttempted}">
+                    <form role="form" name="signinForm" ng-submit="SignIn()">
+                        
+                            <span ng-if="IsInvalidLoginAttempted">
 								<div class="help-block text-white"> Invalid Username and Password </div>
 							</span>
-                <div class="form-group" ng-class="{ 'has-error' : signinForm.username.$invalid && signinForm.$submitted }">
-                    <input id="signin_username" class="form-control" ng-model="User.Username" name="username" placeholder="Username" maxlength="100" autofocus required>
-                    <div ng-class="{ 'form-errors': signinForm.username.$invalid }" ng-messages="signinForm.username.$error" ng-show="signinForm.username.$error && signinForm.$submitted">
-                    </div>
-                </div>
-                <div class="form-group" ng-class="{ 'has-error' : signinForm.password.$invalid && signinForm.$submitted }">
-                    <!-- To disable autofill in firefox -->
-                    <input type="text" style="display:none"/>
-                    <input type="password" style="display:none"/>
-                    <!-- firefox- disable autofill setting ends -->
-                    <input type="password" class="form-control" ng-model="User.Password" name="password" placeholder="Password" maxlength="100"
-                        required>
-                    <div ng-class="{ 'form-errors': signinForm.password.$invalid }" ng-messages="signinForm.password.$error" ng-show="signinForm.password.$error && signinForm.$submitted">
-                    </div>
-                </div>
+							<div class="form-group">
+								<input id="signin_username" class="form-control" ng-model="Username" name="username" placeholder="Username" maxlength="100" autofocus required>
+								
+							</div>
+							<div class="form-group">
+							   
+								<input type="password" class="form-control" ng-model="Password" name="password" placeholder="Password" maxlength="100"
+									required>
+								
+								</div>
+							
+						   
+							<input type="submit" class="btn btn-danger btn-block" id="btnSignIn" value="Sign-In"/>
                
-                <input type="submit" class="btn btn-danger btn-block" id="btnSignIn" value="Sign-In"/>
-               
-				<div id='popupload' style='display:none;top:10px;left:37px;'>
-				   <div class='popuploadcon'>
-						<img src="img/loader.gif"/>
-				   </div>
-				</div>
-                </fieldset>
                 </form>
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-0"></div>
+    <div class="col-lg-4 col-md-3 col-sm-2 col-xs-0"></div>
 </div>
 <div id='mask'></div>
 </div>

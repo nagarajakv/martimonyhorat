@@ -11,16 +11,17 @@
 
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css?v=1">
     <link rel="stylesheet" href="lib/font-awesome/font-awesome.min.css?v=1">
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500">
+    <!-- <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700"> -->
+    <!-- <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500"> -->
   
     <link rel="stylesheet" href="horat/horat.min.css?v=1">
+	
     <link rel="icon" href="img/favicon.png">
-    <base href="/">
+    <!-- <base href="/"> -->
   </head>
-  <body class="h-100" ng-app="main_app" ng-controller="HomeController">
-    <div class="row h-100 justify-content-center align-items-center">
-      <div class="divContent" ui-view></div>
+  <body class="" ng-app="main_app" ng-controller="HomeController as hm">
+    <div class="">
+      <div class="divContent" ng-view></div>
     </div>
     <div class="loadingBg" style="display: none;" id="loaderdiv">
         <div class="spinner">
@@ -31,16 +32,17 @@
     </div>
     
     <script src="lib/jQuery/jQuery.min.js?v=1"></script>
-    <script src="lib/angular/angular.min.js?v=1" type="text/javascript"></script>
-    <script src="lib/angular/angular-route.min.js?v=1" type="text/javascript"></script>
+    <!-- <script src="lib/angular/angular.min.js?v=1" type="text/javascript"></script> -->
+    <!-- <script src="lib/angular/angular-route.min.js?v=1" type="text/javascript"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="lib/angular/angular-sanitize.min.js?v=1" type="text/javascript"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js?v=1"></script>
     <script src="lib/angular/ui.router.js?v=1" type="text/javascript"></script>
     <script src="lib/Chart.min.js?v=1" type="text/javascript"></script>
     
-    <script src="scripts/config.json?v=1"></script>
-    <script src="response.json"></script>
     <script src="scripts/app.js?v=1"></script>
+    <script src="scripts/config.json?v=1"></script>
     <script src="scripts/constants.js?v=1"></script>
 	 <script src="horat/horat.min.js?v=1"></script>
 
