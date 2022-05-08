@@ -22,6 +22,10 @@ main_app.config(function($routeProvider) {
   .when("/forgot", {
     templateUrl : "html/forgot.html",
 	controller : "ForgotController"
+  })
+  .when("/create", {
+    templateUrl : "html/createaccount.html",
+	controller : "CreateAccountController"
   });
   //.otherwise({redirectTo: '/'});
   
